@@ -9,12 +9,20 @@ public class GT_GUIContainer_Dynamic_MbyN extends GT_GUIContainerMetaTile_Machin
 
     private final String mName;
 
-    public GT_GUIContainer_Dynamic_MbyN(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName) {
-        this(aInventoryPlayer, aTileEntity, aName, "");
+    public GT_GUIContainer_Dynamic_MbyN(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, int size) {
+        this(aInventoryPlayer, aTileEntity, aName, size, size);
     }
 
-    public GT_GUIContainer_Dynamic_MbyN(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, String aBackground) {
-        super(new GT_Container_4by4(aInventoryPlayer, aTileEntity), RES_PATH_GUI + aBackground + "generic.png");
+    public GT_GUIContainer_Dynamic_MbyN(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, int cols, int rows) {
+        this(aInventoryPlayer, aTileEntity, aName, "", cols, rows);
+    }
+
+    public GT_GUIContainer_Dynamic_MbyN(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, String aBackground, int size) {
+        this(aInventoryPlayer, aTileEntity, aName, aBackground, size, size);
+    }
+
+    public GT_GUIContainer_Dynamic_MbyN(InventoryPlayer aInventoryPlayer, IGregTechTileEntity aTileEntity, String aName, String aBackground, int cols, int rows) {
+        super(new GT_Container_Dynamic_MbyN(aInventoryPlayer, aTileEntity, cols, rows), RES_PATH_GUI + aBackground + "generic.png");
         mName = aName;
     }
 
