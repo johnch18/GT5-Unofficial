@@ -9,8 +9,8 @@ public class GT_Container_Dynamic_MbyN extends GT_ContainerMetaTile_Machine {
     protected int cols;
     protected int rows;
     //
-    public static final int slotSpacingX = 5;
-    public static final int slotSpacingY = 5;
+    public static final int slotSpacingX = 18;
+    public static final int slotSpacingY = 18;
     public static final int slotHeight = 10;
     public static final int slotWidth = 10;
 
