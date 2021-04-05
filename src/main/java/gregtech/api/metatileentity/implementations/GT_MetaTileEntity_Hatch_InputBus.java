@@ -79,7 +79,8 @@ public class GT_MetaTileEntity_Hatch_InputBus extends GT_MetaTileEntity_Hatch {
 
     @Override
     public Object getServerGUI(int aID, InventoryPlayer aPlayerInventory, IGregTechTileEntity aBaseMetaTileEntity) {
-        switch (mTier) {
+        return new GT_Container_Dynamic_MbyN(aPlayerInventory, aBaseMetaTileEntity, mTier);
+        /*switch (mTier) {
             case 0:
                 return new GT_Container_1by1(aPlayerInventory, aBaseMetaTileEntity);
             case 1:
@@ -88,7 +89,7 @@ public class GT_MetaTileEntity_Hatch_InputBus extends GT_MetaTileEntity_Hatch {
                 return new GT_Container_3by3(aPlayerInventory, aBaseMetaTileEntity);
             default:
                 return new GT_Container_4by4(aPlayerInventory, aBaseMetaTileEntity);
-        }
+        }*/
     }
 
     @Override
